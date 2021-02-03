@@ -3,12 +3,8 @@
 # import app's class View
 # set 'app': AppView
 
-from myapp.view import View as MyAppView
-from messager.view import View as MessagerView
 
 apps = {
-    'myapp': MyAppView,
-    'messager': MessagerView,
 }
 
 
