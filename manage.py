@@ -14,13 +14,7 @@ def new_app():
 
 
 def create_files(app_name):
-    with open('websocket/templates/model.py', 'r') as model:
-        model_data = model.read()
-
-    with open(app_name + '/model.py', 'w') as new_model:
-        new_model.write(model_data)
-
-    with open('websocket/templates/view.py', 'r') as view:
+    with open('websocket/app_template/view.py', 'r') as view:
         view_data = view.read()
 
     with open(app_name + '/view.py', 'w') as new_view:

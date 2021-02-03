@@ -1,19 +1,18 @@
-from .model import Model
+from websocket.base.view.base_view import BaseView
+import re
 
-class View:
-    def __init__(self, websocket):
-        self.model = Model()
-        self.websocket = websocket
-
+class View(BaseView):
     def onmessage(self, **data):
         print('message')
         print(data)
+        print('')
         #new message
         return
 
     def onconnect(self, **data):
-        print('connection accept')
+        print('connection accepted')
         print(data)
+        print('')
         #connection accept
         return
 
@@ -21,4 +20,5 @@ class View:
         print('close')
         print(data)
         #connection closed
+        #custom close connection
         return
